@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>의료 기록 자동화 | 스마트코아솔루션</title>
+  <meta name="description" content="AI 음성인식을 통한 의료 기록 자동화 및 EMR 연동 솔루션">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0a487c">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .service-hero {
+      background: linear-gradient(135deg, #e8f5e8, #f1f8e9);
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .service-hero h1 {
+      font-size: 36px;
+      color: #2e7d32;
+      margin-bottom: 16px;
+    }
+    .service-hero p {
+      font-size: 18px;
+      color: #388e3c;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-left: 4px solid #4caf50;
+    }
+    .feature-card h3 {
+      color: #2e7d32;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+    .benefits {
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 32px 0;
+    }
+    .benefits h3 {
+      color: #1976d2;
+      margin-bottom: 16px;
+    }
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    .benefits li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e0e0e0;
+      position: relative;
+      padding-left: 24px;
+    }
+    .benefits li:before {
+      content: "✓";
+      color: #4caf50;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    .tech-specs {
+      background: #e3f2fd;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 32px 0;
+    }
+    .tech-specs h3 {
+      color: #1565c0;
+      margin-bottom: 16px;
+    }
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #bbdefb;
+    }
+    .spec-item:last-child {
+      border-bottom: none;
+    }
+    .spec-label {
+      font-weight: 600;
+      color: #0d47a1;
+    }
+    .spec-value {
+      color: #1976d2;
+      background: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <a href="/"><img src="/icons/icon-192.png" alt="SCS"></a>
+        <div class="title">의료 기록 자동화</div>
+      </div>
+      <div class="menu">
+        <a href="/index.html">홈</a>
+        <div class="dropdown" id="svcDropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="svcSubmenu">
+            서비스 <span class="caret" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="svcSubmenu" role="menu">
+            <a role="menuitem" href="/services.html"><strong>서비스 전체 보기</strong></a>
+            <div style="height:1px;background:#e5eaf3;margin:4px 0;"></div>
+            <a role="menuitem" href="/healthcare-diagnosis.html">정신 건강·인지 기능 진단</a>
+            <a role="menuitem" href="/healthcare-emr.html">의료 기록 자동화</a>
+            <a role="menuitem" href="/healthcare-rehab.html">재활 치료·의료 통역</a>
+          </div>
+        </div>
+        <a href="/manufacturing.html">스마트제조</a>
+        <a href="/contact.html">문의</a>
+        <a href="/admin-announcements.html">공지사항등록</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="service-hero">
+    <div class="container">
+      <h1>의료 기록 자동화</h1>
+      <p>AI 음성인식 기술로 진료 내용을 정확하게 인식하고 EMR에 자동 저장하여 의료진의 업무 효율성을 극대화합니다.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2>서비스 개요</h2>
+    <p>의료진이 진료 내용을 음성으로 입력하면, AI가 의료 전문 용어를 정확하게 인식하여 전자 의료 기록(EMR)에 자동으로 저장하는 혁신적인 솔루션입니다. 복잡한 의료 용어와 약어도 정확하게 인식하여 의료진의 업무 시간을 단축하고 환자 케어에 더 집중할 수 있도록 지원합니다.</p>
+    
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>고정확도 음성인식</h3>
+        <p>의료 전문 용어와 약어를 95% 이상의 정확도로 인식하여 오타와 오류를 최소화합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>실시간 EMR 연동</h3>
+        <p>음성 입력과 동시에 EMR 시스템에 실시간으로 저장되어 즉시 확인이 가능합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>다국어 지원</h3>
+        <p>한국어, 영어, 중국어 등 다양한 언어의 의료 용어를 지원합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>보안 및 규정 준수</h3>
+        <p>HIPAA, GDPR 등 의료 정보 보호 규정을 완벽하게 준수합니다.</p>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <h3>도입 효과</h3>
+      <ul>
+        <li><strong>업무 시간 단축:</strong> 의료 기록 작성 시간을 70% 단축</li>
+        <li><strong>정확성 향상:</strong> 오타 및 오류 감소로 의료 품질 향상</li>
+        <li><strong>의료진 만족도:</strong> 반복적인 기록 작업에서 해방</li>
+        <li><strong>환자 케어 집중:</strong> 기록 작성 대신 환자와의 소통에 집중</li>
+        <li><strong>비용 절감:</strong> 의료 기록 관리 인력 및 시간 비용 절감</li>
+      </ul>
+    </div>
+
+    <div class="tech-specs">
+      <h3>기술 사양</h3>
+      <div class="spec-item">
+        <span class="spec-label">음성인식 정확도</span>
+        <span class="spec-value">95% 이상</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">지원 언어</span>
+        <span class="spec-value">한국어, 영어, 중국어</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">EMR 연동</span>
+        <span class="spec-value">HL7 FHIR, DICOM</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">응답 속도</span>
+        <span class="spec-value">실시간 (1초 이내)</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">보안 인증</span>
+        <span class="spec-value">HIPAA, GDPR, ISO 27001</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 32px;">
+      <h3>활용 시나리오</h3>
+      <ul class="slim">
+        <li><strong>진료실:</strong> 의사가 환자와의 대화를 음성으로 입력하여 진료 기록 자동 생성</li>
+        <li><strong>수술실:</strong> 수술 과정을 음성으로 기록하여 수술 보고서 자동 작성</li>
+        <li><strong>응급실:</strong> 응급 상황에서 빠른 음성 입력으로 환자 상태 기록</li>
+        <li><strong>검사실:</strong> 검사 결과를 음성으로 입력하여 검사 보고서 자동 생성</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="cta">
+      <a href="/contact.html" class="button">문의하기</a>
+      <a href="/healthcare.html" class="button ghost">다른 서비스 보기</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">SmartCoreSolution, Inc. © 2025</div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

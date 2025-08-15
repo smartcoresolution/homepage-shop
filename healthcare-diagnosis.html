@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>정신 건강·인지 기능 진단 | SmartCoreSolution</title>
+  <meta name="description" content="AI 음성·언어 분석 기반 정신 건강·인지 기능 진단 서비스 소개">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0a487c">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="/icons/icon-192.png" alt="SCS">
+        <div class="title">SmartCoreSolution, Inc.</div>
+      </div>
+      <div class="menu">
+        <a href="/index.html">홈</a>
+        <div class="dropdown" id="svcDropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="svcSubmenu">
+            서비스 <span class="caret" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="svcSubmenu" role="menu">
+            <a role="menuitem" href="/services.html"><strong>서비스 전체 보기</strong></a>
+            <div style="height:1px;background:#e5eaf3;margin:4px 0;"></div>
+            <a role="menuitem" href="/healthcare-diagnosis.html">정신 건강·인지 기능 진단</a>
+            <a role="menuitem" href="/healthcare-emr.html">의료 기록 자동화</a>
+            <a role="menuitem" href="/healthcare-rehab.html">재활 치료·의료 통역</a>
+          </div>
+        </div>
+        <a href="/manufacturing.html">스마트제조</a>
+        <a href="/contact.html">문의</a>
+        <a href="/admin-announcements.html">공지사항등록</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section container">
+    <h1>정신 건강·인지 기능 진단</h1>
+    <p>발화 속도, 억양, 어휘 다양성, 침묵 패턴 등을 AI로 분석하여 치매, 우울증 등 정신 건강 문제의 조기 징후를 탐지·예측합니다. 병원, 요양원, 재활센터 등 다양한 환경에서 활용 가능합니다.</p>
+    <ul>
+      <li>치매 조기 진단 지원</li>
+      <li>우울증 및 정서 상태 분석</li>
+      <li>비대면·원격 진료 연계</li>
+      <li>모바일·웹 통합 데이터 수집</li>
+    </ul>
+    <a class="button" href="/contact.html">서비스 문의하기</a>
+  </section>
+
+  <!-- 소개 영상 섹션 -->
+  <section class="section container">
+    <h2>🎬 서비스 소개 영상</h2>
+    <div class="video-container">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/kME2eabx2Wo?start=2&rel=0&modestbranding=1" 
+          title="정신 건강·인지 기능 진단 서비스 소개"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          loading="lazy"
+          onload="this.style.display='block'"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        </iframe>
+        <!-- 영상 로드 실패 시 표시할 대체 콘텐츠 -->
+        <div class="video-fallback" style="display: none;">
+          <div class="fallback-content">
+            <div class="fallback-icon">📺</div>
+            <h4>영상 로드 중...</h4>
+            <p>YouTube 영상이 로드되지 않았습니다.</p>
+            <a href="https://www.youtube.com/watch?v=kME2eabx2Wo&t=2s" target="_blank" rel="noopener" class="button">
+              YouTube에서 직접 보기
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="video-info">
+        <h3>AI 기반 정신건강 진단 솔루션</h3>
+        <p>음성인식과 AI 분석을 통해 정신건강 상태를 객관적으로 평가하고, 조기 진단을 지원하는 혁신적인 서비스를 소개합니다.</p>
+        <div class="video-features">
+          <span class="feature-tag">🎯 조기 진단</span>
+          <span class="feature-tag">🔬 AI 분석</span>
+          <span class="feature-tag">📱 모바일 지원</span>
+          <span class="feature-tag">🏥 의료진 연계</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      SmartCoreSolution, Inc. © 2025
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+  <style>
+    /* 상단 네비게이션 버튼 스타일 */
+    .nav-btn {
+      padding: 8px 16px;
+      border: 1px solid #d5def0;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .home-btn {
+      background: #ffffff;
+      color: #2a4a8a;
+      border-radius: 50px;
+      padding: 8px 16px;
+    }
+    
+    .healthcare-btn {
+      background: #ffffff;
+      color: #2a4a8a;
+      border-radius: 20px;
+      padding: 8px 16px;
+    }
+    
+    .nav-btn:hover {
+      background: #f1f5ff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+  <script>
+    // YouTube 영상 로딩 상태 확인
+    document.addEventListener('DOMContentLoaded', function() {
+      const iframe = document.querySelector('.video-wrapper iframe');
+      const fallback = document.querySelector('.video-fallback');
+      
+      if (iframe) {
+        // iframe 로딩 완료 확인
+        iframe.addEventListener('load', function() {
+          console.log('YouTube 영상 로딩 완료');
+          this.style.display = 'block';
+          if (fallback) fallback.style.display = 'none';
+        });
+        
+        // iframe 로딩 실패 확인
+        iframe.addEventListener('error', function() {
+          console.log('YouTube 영상 로딩 실패');
+          this.style.display = 'none';
+          if (fallback) fallback.style.display = 'flex';
+        });
+        
+        // 10초 후에도 로딩되지 않으면 대체 콘텐츠 표시
+        setTimeout(function() {
+          if (iframe.style.display !== 'block') {
+            console.log('YouTube 영상 로딩 타임아웃');
+            iframe.style.display = 'none';
+            if (fallback) fallback.style.display = 'flex';
+          }
+        }, 10000);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>스마트제조 솔루션 | SmartCoreSolution</title>
+  <meta name="description" content="IoT·AI·MES 기반 스마트제조 솔루션 소개">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0a487c">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="/icons/icon-192.png" alt="SCS">
+        <div class="title">SmartCoreSolution, Inc.</div>
+      </div>
+      <div class="menu">
+        <a href="/index.html">홈</a>
+        <div class="dropdown" id="svcDropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="svcSubmenu">
+            서비스 <span class="caret" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="svcSubmenu" role="menu">
+            <a role="menuitem" href="/services.html"><strong>서비스 전체 보기</strong></a>
+            <div style="height:1px;background:#e5eaf3;margin:4px 0;"></div>
+            <a role="menuitem" href="/healthcare-diagnosis.html">정신 건강·인지 기능 진단</a>
+            <a role="menuitem" href="/healthcare-emr.html">의료 기록 자동화</a>
+            <a role="menuitem" href="/healthcare-rehab.html">재활 치료·의료 통역</a>
+          </div>
+        </div>
+        <a href="/manufacturing.html">스마트제조</a>
+        <a href="/contact.html">문의</a>
+        <a href="/admin-announcements.html">공지사항등록</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container header">
+      <div class="left">
+        <h1>스마트 제조 솔루션</h1>
+        <p class="caption">IoT · AI · MES 기반으로 생산·품질·안전의 전 과정을 데이터화하고, 실시간 모니터링과 의사결정을 돕는 통합 솔루션입니다.</p>
+        <div>
+          <span class="badge">데이터 기반 의사결정</span>
+          <span class="badge">실시간 모니터링</span>
+          <span class="badge">공정 최적화</span>
+        </div>
+      </div>
+      <div class="right card">
+        <div class="kvs">
+          <div class="kv"><div class="key">개요</div><div class="val">중소 제조기업의 디지털 전환(DX) 가속화를 위한 표준화된 솔루션 제공</div></div>
+          <div class="kv"><div class="key">지원규모</div><div class="val">정부지원금 총 6,000만원 내외 (기업부담 30% 내외)</div></div>
+          <div class="kv"><div class="key">신청기간</div><div class="val">연중 수시 공고(지역별 상이)</div></div>
+          <div class="kv"><div class="key">지원내용</div><div class="val">스마트공방/스마트팩토리 등 사업과 연계하여 설비/공정/품질 데이터의 통합 수집·분석·시각화</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>추진절차</h2>
+      <div class="flow">
+        <div class="step card"><img class="icon" src="/assets/icons/announce.svg" alt="공고" onerror="this.style.display='none'"><div>공고</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="/assets/icons/doc.svg" alt="서류평가" onerror="this.style.display='none'"><div>서류평가</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="/assets/icons/present.svg" alt="발표평가" onerror="this.style.display='none'"><div>발표평가</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="/assets/icons/handshake.svg" alt="협약" onerror="this.style.display='none'"><div>협약</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="/assets/icons/run.svg" alt="사업수행" onerror="this.style.display='none'"><div>사업수행</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="/assets/icons/report.svg" alt="결과보고" onerror="this.style.display='none'"><div>결과보고</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="/assets/icons/monitor.svg" alt="사후평가" onerror="this.style.display='none'"><div>사후평가</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>구성도</h2>
+      <div class="mes-diagram card">
+        <div class="mes-row" style="margin-bottom:10px">
+          <div class="mes-node">설비/센서</div>
+          <div class="mes-node">생산 데이터 수집</div>
+          <div class="mes-node">MES</div>
+          <div class="mes-node">서버(클라우드/IDC)</div>
+          <div class="mes-node">대시보드/쇼핑몰 연계</div>
+        </div>
+        <div class="caption">설비·센서 → MES → 서버 → 대시보드/커머스 연계 흐름</div>
+      </div>
+
+      <div class="grid-3" style="margin-top:14px">
+        <div class="card">입고관리</div>
+        <div class="card">생산관리</div>
+        <div class="card">품질관리</div>
+        <div class="card">설비관리</div>
+        <div class="card">기초정보관리</div>
+        <div class="card">출하관리</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>기능 및 특징</h2>
+      <div class="icon-list">
+        <div class="icon-item"><img src="/assets/icons/chart.svg" alt="생산/품질 분석" onerror="this.style.display='none'"><div><strong>생산/품질 분석</strong><div class="caption">주요 KPI를 시각화하여 병목과 불량을 조기 감지</div></div></div>
+        <div class="icon-item"><img src="/assets/icons/monitor.svg" alt="실시간 모니터링" onerror="this.style.display='none'"><div><strong>실시간 모니터링</strong><div class="caption">설비 상태·알람·작업 지시 현황을 실시간 파악</div></div></div>
+        <div class="icon-item"><img src="/assets/icons/server.svg" alt="클라우드/온프레미스" onerror="this.style.display='none'"><div><strong>클라우드/온프레미스</strong><div class="caption">IDC/클라우드 모두 지원, 보안 및 가용성 강화</div></div></div>
+        <div class="icon-item"><img src="/assets/icons/gear.svg" alt="공정 최적화" onerror="this.style.display='none'"><div><strong>공정 최적화</strong><div class="caption">자동화 룰 기반으로 작업·품질 공정을 최적화</div></div></div>
+        <div class="icon-item"><img src="/assets/icons/doc.svg" alt="표준 양식" onerror="this.style.display='none'"><div><strong>표준 양식</strong><div class="caption">입출고, 작업표준, 검사성적서 등 양식 표준화</div></div></div>
+        <div class="icon-item"><img src="/assets/icons/present.svg" alt="교육/컨설팅" onerror="this.style.display='none'"><div><strong>교육/컨설팅</strong><div class="caption">현장 정착을 위한 교육과 컨설팅 패키지 제공</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 스마트제조 기대효과 섹션 추가 -->
+  <section class="section">
+    <div class="container">
+      <h2>🚀 스마트제조 기대효과</h2>
+      <div class="effects-grid">
+        <!-- 정보활용 극대화 -->
+        <div class="effect-category">
+          <h3>📊 정보활용 극대화</h3>
+          <div class="effect-items">
+            <div class="effect-item">
+              <span class="effect-icon">⚡</span>
+              <div class="effect-content">
+                <strong>현황과 문제점을 실시간으로 파악 및 대응</strong>
+                <p>IoT 센서와 MES를 통한 실시간 데이터 수집으로 즉시 대응 가능</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">📈</span>
+              <div class="effect-content">
+                <strong>공정 데이터 기반의 의사결정 속도 향상</strong>
+                <p>빅데이터 분석을 통한 객관적이고 신속한 의사결정 지원</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">🎯</span>
+              <div class="effect-content">
+                <strong>설비·인력·자원의 최적 배분</strong>
+                <p>AI 알고리즘을 통한 자원 최적화 및 효율성 극대화</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 비용 절감 및 효율성 향상 -->
+        <div class="effect-category">
+          <h3>💰 비용 절감 및 효율성 향상</h3>
+          <div class="effect-items">
+            <div class="effect-item">
+              <span class="effect-icon">⚡</span>
+              <div class="effect-content">
+                <strong>전력·시간 절감</strong>
+                <p>스마트 설비 관리로 에너지 효율성 향상 및 작업 시간 단축</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">♻️</span>
+              <div class="effect-content">
+                <strong>불필요한 작업 공정 및 자원 낭비 감소</strong>
+                <p>데이터 분석을 통한 공정 최적화로 낭비 요소 제거</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">🤖</span>
+              <div class="effect-content">
+                <strong>시스템 자동화를 통한 인력 효율 극대화</strong>
+                <p>반복 작업 자동화로 인력의 창의적 업무 집중 가능</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 대응 속도 및 품질 향상 -->
+        <div class="effect-category">
+          <h3>⚡ 대응 속도 및 품질 향상</h3>
+          <div class="effect-items">
+            <div class="effect-item">
+              <span class="effect-icon">🚀</span>
+              <div class="effect-content">
+                <strong>신속한 데이터 분석으로 대응 시간 단축</strong>
+                <p>실시간 모니터링과 AI 분석으로 문제 상황 즉시 대응</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">🔍</span>
+              <div class="effect-content">
+                <strong>품질 관리 강화</strong>
+                <p>데이터 기반 품질 분석으로 불량률 감소 및 일관성 향상</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">📊</span>
+              <div class="effect-content">
+                <strong>예측 정비 및 사전 대응</strong>
+                <p>설비 상태 예측으로 예방 정비 및 다운타임 최소화</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 협력업체 관리 및 공급망 최적화 -->
+        <div class="effect-category">
+          <h3>🤝 협력업체 관리 및 공급망 최적화</h3>
+          <div class="effect-items">
+            <div class="effect-item">
+              <span class="effect-icon">🏭</span>
+              <div class="effect-content">
+                <strong>협력업체 생산·품질정보의 투명한 공유</strong>
+                <p>실시간 데이터 연동으로 협력업체 현황 투명성 확보</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">🌐</span>
+              <div class="effect-content">
+                <strong>공급망 전반의 생산성 및 품질 수준 향상</strong>
+                <p>전체 공급망의 데이터 통합으로 시너지 효과 창출</p>
+              </div>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">✅</span>
+              <div class="effect-content">
+                <strong>납기 준수율 및 고객 신뢰도 향상</strong>
+                <p>정확한 생산 계획과 품질 관리로 고객 만족도 증대</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>스마트공방 소프트웨어 임대료 (2년)</h2>
+      <table class="table">
+        <thead>
+          <tr><th>사용 ID 개수</th><th>가격(원)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1개</td><td>14,000,000</td></tr>
+          <tr><td>2개</td><td>17,000,000</td></tr>
+          <tr><td>3개</td><td>22,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">SmartCoreSolution, Inc. © 2025</div>
+  </footer>
+  <script src="/app.js"></script>
+  <style>
+    /* 상단 네비게이션 버튼 스타일 */
+    .nav-btn {
+      padding: 8px 16px;
+      border: 1px solid #d5def0;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .home-btn {
+      background: #ffffff;
+      color: #2a4a8a;
+      border-radius: 50px;
+      padding: 8px 16px;
+    }
+    
+    .healthcare-btn {
+      background: #ffffff;
+      color: #2a4a8a;
+      border-radius: 20px;
+      padding: 8px 16px;
+    }
+    
+    .nav-btn:hover {
+      background: #f1f5ff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* 스마트제조 기대효과 섹션 스타일 */
+    .effects-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .effect-category {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .effect-category h3 {
+      margin: 0 0 20px 0;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .effect-items {
+      display: grid;
+      gap: 16px;
+    }
+    
+    .effect-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 16px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .effect-item:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+    
+    .effect-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+    }
+    
+    .effect-content strong {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    
+    .effect-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+    
+    /* 라이트 테마 지원 */
+    @media (prefers-color-scheme: light) {
+      .effect-category {
+        background: #ffffff;
+        border-color: #e5eaf3;
+        box-shadow: 0 4px 12px rgba(19,41,89,0.08);
+      }
+      
+      .effect-item {
+        background: rgba(0,0,0,0.02);
+        border-color: rgba(0,0,0,0.05);
+      }
+      
+      .effect-item:hover {
+        background: rgba(0,0,0,0.05);
+        border-color: rgba(0,0,0,0.1);
+      }
+      
+      .effect-icon {
+        background: rgba(0,0,0,0.05);
+      }
+    }
+    
+    /* 반응형 디자인 */
+    @media (max-width: 900px) {
+      .effects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .effect-category {
+        padding: 20px;
+      }
+      
+      .effect-item {
+        padding: 14px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .effect-category {
+        padding: 16px;
+      }
+      
+      .effect-item {
+        padding: 12px;
+      }
+      
+      .effect-content strong {
+        font-size: 13px;
+      }
+      
+      .effect-content p {
+        font-size: 12px;
+      }
+    }
+
+    /* 드롭다운 메뉴 스타일 */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .dropbtn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 250px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #374151;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s ease;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+      background: #f8fafc;
+      color: #4a9eff;
+    }
+
+    .dropdown-content a strong {
+      color: #1f2937;
+      font-weight: 600;
+    }
+
+    .caret {
+      margin-left: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown[aria-expanded="true"] .caret {
+      transform: rotate(180deg);
+    }
+  </style>
+
+  <script>
+    // 드롭다운 메뉴 기능
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdown = document.getElementById('svcDropdown');
+      const submenu = document.getElementById('svcSubmenu');
+      
+      if (dropdown && submenu) {
+        // 드롭다운 버튼 클릭 시 메뉴 토글
+        dropdown.addEventListener('click', function(e) {
+          // 링크가 아닌 버튼 영역만 클릭했을 때만 preventDefault
+          if (e.target.tagName !== 'A') {
+            const isExpanded = dropdown.getAttribute('aria-expanded') === 'true';
+            dropdown.setAttribute('aria-expanded', !isExpanded);
+            submenu.style.display = isExpanded ? 'none' : 'block';
+          }
+        });
+
+        // 드롭다운 메뉴 내 링크 클릭 시 메뉴 닫기
+        submenu.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') {
+            // 링크 클릭 시 드롭다운 메뉴 닫기
+            dropdown.setAttribute('aria-expanded', 'false');
+            submenu.style.display = 'none';
+          }
+        });
+
+        // 외부 클릭 시 드롭다운 닫기
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.setAttribute('aria-expanded', 'false');
+            submenu.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

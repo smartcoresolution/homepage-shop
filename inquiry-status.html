@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>문의 조회 | 스마트코아솔루션</title>
+  <meta name="description" content="문의 상태 조회 페이지">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0a487c">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .inquiry-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .inquiry-form {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    
+    .inquiry-form h3 {
+      margin: 0 0 20px 0;
+      color: var(--text);
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .form-group {
+      flex: 1;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      background: var(--panel);
+      color: var(--text);
+    }
+    
+    .search-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    
+    .search-btn:hover {
+      background: var(--button-hover);
+    }
+    
+    .inquiry-result {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      display: none;
+    }
+    
+    .inquiry-info {
+      margin-bottom: 20px;
+    }
+    
+    .inquiry-info h4 {
+      margin: 0 0 16px 0;
+      color: var(--text);
+      font-size: 18px;
+    }
+    
+    .info-row {
+      display: flex;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+    
+    .info-label {
+      font-weight: 600;
+      color: var(--text);
+      width: 120px;
+      flex-shrink: 0;
+    }
+    
+    .info-value {
+      color: var(--text);
+      flex: 1;
+    }
+    
+    .inquiry-message {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    
+    .inquiry-message p {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    
+    .no-result {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+    }
+    
+    .error-message {
+      background: #fee2e2;
+      border: 1px solid #f87171;
+      border-radius: 8px;
+      padding: 16px;
+      color: #991b1b;
+      margin-top: 16px;
+    }
+    
+    .delete-btn:hover {
+      background: #b91c1c !important;
+      transform: translateY(-1px);
+    }
+    
+    /* 문의 리스트 스타일 */
+    .inquiry-list-section {
+      margin-top: 32px;
+    }
+    
+    .inquiry-list-section h3 {
+      margin: 0 0 20px 0;
+      color: var(--text);
+      font-size: 20px;
+    }
+    
+    .inquiry-list {
+      display: grid;
+      gap: 16px;
+    }
+    
+    .inquiry-item {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .inquiry-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-color: var(--primary);
+    }
+    
+    .inquiry-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    
+    .inquiry-item-title {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 16px;
+      margin: 0;
+    }
+    
+    .inquiry-item-meta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    
+    .inquiry-item-content {
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .inquiry-item-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    
+    .visibility-badge {
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .visibility-badge.public {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #22c55e;
+    }
+    
+    .visibility-badge.private {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #f59e0b;
+    }
+    
+    .no-inquiries {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    
+    /* 모달 스타일 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+    }
+    
+    .modal-content {
+      background-color: var(--card-bg);
+      margin: 5% auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: modalSlideIn 0.3s ease-out;
+    }
+    
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 24px 16px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .modal-header h3 {
+      margin: 0;
+      color: var(--text);
+      font-size: 20px;
+    }
+    
+    .close {
+      color: var(--muted);
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s ease;
+    }
+    
+    .close:hover {
+      color: var(--text);
+    }
+    
+    .modal-body {
+      padding: 24px;
+    }
+    
+    .modal-body > div {
+      margin-bottom: 20px;
+    }
+    
+    .modal-body > div:last-child {
+      margin-bottom: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .form-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .info-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+      
+      .info-label {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <a href="/"><img src="/icons/icon-192.png" alt="SCS"></a>
+        <div class="title">문의 조회</div>
+      </div>
+      <div class="menu">
+        <a href="/" class="nav-btn home-btn">홈</a>
+        <a href="/contact.html" class="nav-btn">문의하기</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section container inquiry-container">
+    <h1>문의 조회</h2>
+    <p>문의하신 내용의 상태를 확인할 수 있습니다.</p>
+    
+    <div class="inquiry-form">
+      <h3>문의 조회</h3>
+      <form id="inquiryForm" onsubmit="return searchInquiry(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inquiryId">문의 ID</label>
+            <input type="text" id="inquiryId" name="inquiryId" placeholder="예: INQ-ABC123" required>
+          </div>
+          <div class="form-group">
+            <label for="inquiryPassword">비밀번호 (비공개 문의시)</label>
+            <input type="password" id="inquiryPassword" name="inquiryPassword" placeholder="비공개 문의인 경우 입력">
+          </div>
+        </div>
+        <button type="submit" class="search-btn">문의 조회</button>
+      </form>
+    </div>
+    
+    <div id="inquiryResult" class="inquiry-result">
+      <!-- 조회 결과가 여기에 표시됩니다 -->
+    </div>
+    
+    <!-- 문의 리스트 섹션 -->
+    <div class="inquiry-list-section">
+      <h3>📋 문의 목록</h3>
+      <div id="inquiryList" class="inquiry-list">
+        <!-- 문의 목록이 여기에 동적으로 생성됩니다 -->
+      </div>
+    </div>
+    
+    <!-- 문의 상세 팝업 모달 -->
+    <div id="inquiryModal" class="modal" style="display: none;">
+      <div class="modal-content" style="max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;">
+        <div class="modal-header">
+          <h3 id="modalTitle"></h3>
+          <span class="close" onclick="closeInquiryModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div id="modalInquiryInfo"></div>
+          <div id="modalInquiryContent"></div>
+          <div id="modalInquiryActions"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">SmartCoreSolution, Inc. © 2025</div>
+  </footer>
+
+  <script>
+    // 페이지 로드 시 문의 목록 표시
+    document.addEventListener('DOMContentLoaded', function() {
+      displayInquiryList();
+    });
+    
+    function searchInquiry(e) {
+      e.preventDefault();
+      
+      const inquiryId = document.getElementById('inquiryId').value.trim();
+      const password = document.getElementById('inquiryPassword').value.trim();
+      
+      if (!inquiryId) {
+        showError('문의 ID를 입력해 주세요.');
+        return false;
+      }
+      
+      // 로컬 스토리지에서 문의 조회
+      const inquiries = JSON.parse(localStorage.getItem('inquiries') || '[]');
+      console.log('저장된 문의 목록:', inquiries);
+      console.log('검색할 문의 ID:', inquiryId);
+      
+      const inquiry = inquiries.find(inq => inq.id === inquiryId);
+      console.log('찾은 문의:', inquiry);
+      
+      if (!inquiry) {
+        showError(`해당 문의 ID를 찾을 수 없습니다. (검색: ${inquiryId})<br><br>저장된 문의 ID 목록:<br>${inquiries.map(inq => inq.id).join('<br>')}`);
+        return false;
+      }
+      
+      // 비공개 문의인 경우 비밀번호 확인
+      if (inquiry.visibility === '비공개') {
+        if (!password) {
+          showError('비공개 문의입니다. 비밀번호를 입력해 주세요.');
+          return false;
+        }
+        
+        if (password !== inquiry.password) {
+          showError('비밀번호가 일치하지 않습니다.');
+          return false;
+        }
+      }
+      
+      // 문의 결과 표시
+      showInquiryResult(inquiry);
+      return false;
+    }
+    
+    // 문의 내용 삭제
+    function deleteInquiry(inquiryId) {
+      if (confirm('정말로 이 문의를 삭제하시겠습니까?\n\n삭제된 문의는 복구할 수 없습니다.')) {
+        const inquiries = JSON.parse(localStorage.getItem('inquiries') || '[]');
+        const updatedInquiries = inquiries.filter(inq => inq.id !== inquiryId);
+        localStorage.setItem('inquiries', JSON.stringify(updatedInquiries));
+        
+        // 결과 영역 초기화
+        document.getElementById('inquiryResult').style.display = 'none';
+        document.getElementById('inquiryForm').reset();
+        
+        // 모달 닫기
+        closeInquiryModal();
+        
+        // 문의 목록 새로고침
+        displayInquiryList();
+        
+        // 삭제 완료 메시지
+        const deleteMsg = document.createElement('div');
+        deleteMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #dc2626; color: white; padding: 12px 20px; border-radius: 8px; z-index: 1000; font-weight: 600;';
+        deleteMsg.textContent = '🗑️ 문의가 삭제되었습니다!';
+        document.body.appendChild(deleteMsg);
+        
+        setTimeout(() => {
+          document.body.removeChild(deleteMsg);
+        }, 3000);
+      }
+    }
+    
+    function showInquiryResult(inquiry) {
+      const resultDiv = document.getElementById('inquiryResult');
+      const resultHtml = `
+        <div class="inquiry-info">
+          <h4>문의 정보</h4>
+          <div class="info-row">
+            <div class="info-label">문의 ID:</div>
+            <div class="info-value">${inquiry.id}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">문의자:</div>
+            <div class="info-value">${inquiry.name}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">이메일:</div>
+            <div class="info-value">${inquiry.email}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">공개여부:</div>
+            <div class="info-value">${inquiry.visibility}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">접수일시:</div>
+            <div class="info-value">${formatDate(inquiry.timestamp)}</div>
+          </div>
+        </div>
+        <div class="inquiry-message">
+          <h5>문의 내용</h5>
+          <p>${inquiry.message.replace(/\n/g, '</p><p>')}</p>
+        </div>
+        <div class="inquiry-actions" style="margin-top: 20px; text-align: center;">
+          <button type="button" class="delete-btn" onclick="deleteInquiry('${inquiry.id}')" style="background: #dc2626; color: white; border: none; border-radius: 8px; padding: 10px 20px; font-weight: 600; cursor: pointer; transition: background 0.2s ease;">
+            🗑️ 문의 삭제
+          </button>
+        </div>
+      `;
+      
+      resultDiv.innerHTML = resultHtml;
+      resultDiv.style.display = 'block';
+    }
+    
+    function showError(message) {
+      const resultDiv = document.getElementById('inquiryResult');
+      resultDiv.innerHTML = `<div class="error-message">${message}</div>`;
+      resultDiv.style.display = 'block';
+    }
+    
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      return date.toLocaleString('ko-KR', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    }
+    
+    // 문의 목록 표시
+    function displayInquiryList() {
+      const inquiries = JSON.parse(localStorage.getItem('inquiries') || '[]');
+      const inquiryListDiv = document.getElementById('inquiryList');
+      
+      if (inquiries.length === 0) {
+        inquiryListDiv.innerHTML = '<div class="no-inquiries">등록된 문의가 없습니다.</div>';
+        return;
+      }
+      
+      // 최신 순으로 정렬
+      inquiries.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      
+      const inquiryItems = inquiries.map(inquiry => `
+        <div class="inquiry-item" onclick="showInquiryModal('${inquiry.id}')">
+          <div class="inquiry-item-header">
+            <h4 class="inquiry-item-title">${inquiry.name}님의 문의</h4>
+            <div class="inquiry-item-meta">
+              <span class="visibility-badge ${inquiry.visibility === '공개' ? 'public' : 'private'}">
+                ${inquiry.visibility === '공개' ? '공개' : '비공개'}
+              </span>
+              <span>${inquiry.id}</span>
+            </div>
+          </div>
+          <div class="inquiry-item-content">
+            ${inquiry.message.length > 100 ? inquiry.message.substring(0, 100) + '...' : inquiry.message}
+          </div>
+          <div class="inquiry-item-footer">
+            <span>${formatDate(inquiry.timestamp)}</span>
+            <span>${inquiry.email}</span>
+          </div>
+        </div>
+      `).join('');
+      
+      inquiryListDiv.innerHTML = inquiryItems;
+    }
+    
+    // 문의 상세 모달 표시
+    function showInquiryModal(inquiryId) {
+      const inquiries = JSON.parse(localStorage.getItem('inquiries') || '[]');
+      const inquiry = inquiries.find(inq => inq.id === inquiryId);
+      
+      if (!inquiry) return;
+      
+      // 모달 제목
+      document.getElementById('modalTitle').textContent = `${inquiry.name}님의 문의`;
+      
+      // 모달 내용
+      const modalInfo = `
+        <div class="inquiry-info">
+          <h4>문의 정보</h4>
+          <div class="info-row">
+            <div class="info-label">문의 ID:</div>
+            <div class="info-value">${inquiry.id}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">문의자:</div>
+            <div class="info-value">${inquiry.name}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">이메일:</div>
+            <div class="info-value">${inquiry.email}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">공개여부:</div>
+            <div class="info-value">
+              <span class="visibility-badge ${inquiry.visibility === '공개' ? 'public' : 'private'}">
+                ${inquiry.visibility === '공개' ? '공개' : '비공개'}
+              </span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">접수일시:</div>
+            <div class="info-value">${formatDate(inquiry.timestamp)}</div>
+          </div>
+        </div>
+      `;
+      
+      const modalContent = `
+        <div class="inquiry-message">
+          <h5>문의 내용</h5>
+          <p>${inquiry.message.replace(/\n/g, '</p><p>')}</p>
+        </div>
+      `;
+      
+      const modalActions = `
+        <div class="inquiry-actions" style="text-align: center;">
+          <button type="button" class="delete-btn" onclick="deleteInquiry('${inquiry.id}')" style="background: #dc2626; color: white; border: none; border-radius: 8px; padding: 10px 20px; font-weight: 600; cursor: pointer; transition: background 0.2s ease;">
+            🗑️ 문의 삭제
+          </button>
+        </div>
+      `;
+      
+      document.getElementById('modalInquiryInfo').innerHTML = modalInfo;
+      document.getElementById('modalInquiryContent').innerHTML = modalContent;
+      document.getElementById('modalInquiryActions').innerHTML = modalActions;
+      
+      // 모달 표시
+      document.getElementById('inquiryModal').style.display = 'block';
+    }
+    
+    // 문의 모달 닫기
+    function closeInquiryModal() {
+      document.getElementById('inquiryModal').style.display = 'none';
+    }
+    
+    // 모달 외부 클릭 시 닫기
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('inquiryModal');
+      if (event.target === modal) {
+        closeInquiryModal();
+      }
+    });
+    
+    // ESC 키로 모달 닫기
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeInquiryModal();
+      }
+    });
+  </script>
+</body>
+</html>

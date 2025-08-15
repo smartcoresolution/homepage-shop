@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>재활 치료·의료 통역 | SmartCoreSolution</title>
+  <meta name="description" content="AI 기반 재활 치료 및 의료 통역 서비스 소개">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0a487c">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="/icons/icon-192.png" alt="SCS">
+        <div class="title">SmartCoreSolution, Inc.</div>
+      </div>
+      <div class="menu">
+        <a href="/index.html">홈</a>
+        <div class="dropdown" id="svcDropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="svcSubmenu">
+            서비스 <span class="caret" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="svcSubmenu" role="menu">
+            <a role="menuitem" href="/services.html"><strong>서비스 전체 보기</strong></a>
+            <div style="height:1px;background:#e5eaf3;margin:4px 0;"></div>
+            <a role="menuitem" href="/healthcare-diagnosis.html">정신 건강·인지 기능 진단</a>
+            <a role="menuitem" href="/healthcare-emr.html">의료 기록 자동화</a>
+            <a role="menuitem" href="/healthcare-rehab.html">재활 치료·의료 통역</a>
+          </div>
+        </div>
+        <a href="/manufacturing.html">스마트제조</a>
+        <a href="/contact.html">문의</a>
+        <a href="/admin-announcements.html">공지사항등록</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section container">
+    <h1>재활 치료·의료 통역</h1>
+    <p>언어 재활(발음 교정, 진행 분석)과 다국적 환자를 위한 실시간 의료 통역 서비스를 제공합니다. 원격 화상 진료, 국제 의료 봉사, 다국어 병원 환경에서 특히 유용합니다.</p>
+    <ul>
+      <li>발음·억양 교정 훈련</li>
+      <li>언어 진행 상태 분석</li>
+      <li>다국어 실시간 통역</li>
+      <li>AI 기반 대화 지원</li>
+    </ul>
+    <a class="button" href="/contact.html">서비스 문의하기</a>
+  </section>
+
+  <!-- 재활 치료 서비스 소개 영상 섹션 -->
+  <section class="section container">
+    <h2>🎬 서비스 소개 영상</h2>
+    <div class="video-container">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/RPJyAAICkl8?start=221&rel=0&modestbranding=1" 
+          title="재활 치료·의료 통역 서비스 소개"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          loading="lazy"
+          onload="this.style.display='block'"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        </iframe>
+        <!-- 영상 로드 실패 시 표시할 대체 콘텐츠 -->
+        <div class="video-fallback" style="display: none;">
+          <div class="fallback-content">
+            <div class="fallback-icon">📺</div>
+            <h4>영상 로드 중...</h4>
+            <p>YouTube 영상이 로드되지 않았습니다.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="video-info">
+        <h3>AI 기반 재활 치료 & 의료 통역</h3>
+        <p>언어 장애 환자의 재활 치료를 지원하고, 다국적 환자와 의료진 간의 소통을 원활하게 하는 혁신적인 AI 솔루션입니다.</p>
+        <div class="video-features">
+          <span class="feature-tag">🗣️ 언어재활</span>
+          <span class="feature-tag">🌍 다국어통역</span>
+          <span class="feature-tag">🏥 의료진지원</span>
+          <span class="feature-tag">📱 원격진료</span>
+        </div>
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      SmartCoreSolution, Inc. © 2025
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+  <style>
+    /* 상단 네비게이션 버튼 스타일 */
+    .nav-btn {
+      padding: 8px 16px;
+      border: 1px solid #d5def0;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .home-btn {
+      background: #ffffff;
+      color: #2a4a8a;
+      border-radius: 50px;
+      padding: 8px 16px;
+    }
+    
+    .healthcare-btn {
+      background: #ffffff;
+      color: #2a4a8a;
+      border-radius: 20px;
+      padding: 8px 16px;
+    }
+    
+    .nav-btn:hover {
+      background: #f1f5ff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* 서비스 액션 스타일 - 빈 박스 제거 */
+    .service-actions {
+      margin-top: 16px;
+    }
+    
+    .service-actions .button {
+      margin-right: 12px;
+    }
+  </style>
+  <script>
+    // YouTube 영상 로딩 상태 확인
+    document.addEventListener('DOMContentLoaded', function() {
+      const iframe = document.querySelector('.video-wrapper iframe');
+      const fallback = document.querySelector('.video-fallback');
+      
+      if (iframe) {
+        // iframe 로딩 완료 확인
+        iframe.addEventListener('load', function() {
+          console.log('YouTube 영상 로딩 완료');
+          this.style.display = 'block';
+          if (fallback) fallback.style.display = 'none';
+        });
+        
+        // iframe 로딩 실패 확인
+        iframe.addEventListener('error', function() {
+          console.log('YouTube 영상 로딩 실패');
+          this.style.display = 'none';
+          if (fallback) fallback.style.display = 'flex';
+        });
+        
+        // 10초 후에도 로딩되지 않으면 대체 콘텐츠 표시
+        setTimeout(function() {
+          if (iframe.style.display !== 'block') {
+            console.log('YouTube 영상 로딩 타임아웃');
+            iframe.style.display = 'none';
+            if (fallback) fallback.style.display = 'flex';
+          }
+        }, 10000);
+      }
+    });
+  </script>
+</body>
+</html>

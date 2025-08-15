@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>스마트코어솔루션 | 헬스케어 & 스마트제조 SaaS</title>
+  <meta name="description" content="음성인식 기반 헬스케어 및 스마트제조 SaaS 솔루션">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0a487c">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="스마트코어솔루션 | 헬스케어 & 스마트제조 SaaS">
+  <meta property="og:description" content="AI 음성·언어 분석 기반 헬스케어 및 스마트제조 SaaS 솔루션">
+  <meta property="og:image" content="/icons/icon-512.webp">
+  <meta property="og:url" content="https://smartcoresolution.github.io/homepage/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/styles.css">
+  
+  <!-- Firebase SDK 추가 -->
+  <script type="module">
+    // Firebase 설정
+    const firebaseConfig = {
+      apiKey: "YAIzaSyAvv3evd-7vc6f7pPmD6mEFlEkbe_1FeC",
+      authDomain: "smartcore-announcements.firebaseapp.com",
+      projectId: "smartcore-announcements",
+      storageBucket: "smartcore-announcements.firebasestorage.app",
+      messagingSenderId: "221896203183",
+      appId: "1:221896203183:web:320176ba4c1bf52f892d5a"
+    };
+
+    // Firebase 초기화
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+         import { getFirestore, collection, getDocs, query, orderBy } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+     import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js';
+
+         const app = initializeApp(firebaseConfig);
+     const db = getFirestore(app);
+     const storage = getStorage(app);
+     
+     // 전역 변수로 Firebase 인스턴스 제공
+     window.db = db;
+     window.storage = storage;
+     window.collection = collection;
+     window.getDocs = getDocs;
+     window.query = query;
+     window.orderBy = orderBy;
+     window.ref = ref;
+     window.getDownloadURL = getDownloadURL;
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="/icons/icon-192.png" alt="SCS">
+        <div class="title">SmartCoreSolution, Inc.</div>
+      </div>
+      <div class="menu">
+        <a href="#about">홈</a>
+        <div class="dropdown" id="svcDropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="svcSubmenu">
+            서비스 <span class="caret" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="svcSubmenu" role="menu">
+            <a role="menuitem" href="/services.html"><strong>서비스 전체 보기</strong></a>
+            <div style="height:1px;background:#e5eaf3;margin:4px 0;"></div>
+            <a role="menuitem" href="/healthcare-diagnosis.html">정신 건강·인지 기능 진단</a>
+            <a role="menuitem" href="/healthcare-emr.html">의료 기록 자동화</a>
+            <a role="menuitem" href="/healthcare-rehab.html">재활 치료·의료 통역</a>
+          </div>
+        </div>
+        <a href="/manufacturing.html">스마트제조</a>
+        <a href="/contact.html">문의</a>
+        <a href="/admin-announcements.html">공지사항등록</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <div>
+        <h1 id="hero-title">음성인식 기반 <br>헬스케어 & 스마트제조 SaaS</h1>
+        <p>AI 음성·언어 분석을 통해 의료 진단, 의료기록 자동화, 재활·통역을 지원하고, 제조현장의 생산·품질·안전 관리를 디지털 전환합니다.</p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="section container">
+    <div class="company-info">
+      <div class="info-grid">
+        <div class="info-item">
+          <h3>🏢 회사명</h3>
+          <p>스마트코어솔루션(주)</p>
+        </div>
+        <div class="info-item">
+          <h3>🎯 비전</h3>
+          <p>AI 기반 혁신으로 더 나은 세상 만들기</p>
+        </div>
+        <div class="info-item">
+          <h3>💡 핵심기술</h3>
+          <p>음성인식, AI 분석, 클라우드 SaaS</p>
+        </div>
+        <div class="info-item">
+          <h3>🌍 사업영역</h3>
+          <p>헬스케어, 스마트제조</p>
+        </div>
+      </div>
+    </div>
+    
+    <p>스마트코아솔루션(주)는 첨단 음성인식과 인공지능(AI) 분석을 기반으로, 헬스케어와 스마트제조 전반에 걸친 혁신적인 SaaS 솔루션을 제공합니다. 의료 분야에서는 정신 건강 및 인지 기능 진단, 의료 기록 자동화, 재활 치료 지원, 의료 통역 등으로 의료진의 업무 효율을 높이고 환자의 접근성을 향상시키며, 제조 분야에서는 IoT·AI·MES 기반의 디지털 전환으로 생산성 향상, 품질관리 자동화, 실시간 모니터링, 안전관리 강화를 지원합니다.</p>
+  </section>
+
+  <section id="announcements" class="section container">
+    <div class="announcements-header">
+      <h2>📢 공지사항</h2>
+      <button onclick="refreshAnnouncements()" class="refresh-btn" title="새로고침">
+        🔄 새로고침
+      </button>
+    </div>
+    <div class="announcements-container" id="announcementsList">
+      <!-- 공지사항이 동적으로 로드됩니다 -->
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      SmartCoreSolution, Inc. © 2025 · Privacy · Terms
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+  
+  <div id="announcementModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+        <button class="modal-close-btn" onclick="closeModal()" aria-label="닫기">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="modalContent"></div>
+        <div id="modalFiles" class="modal-files"></div>
+        <div id="modalTags" class="modal-tags"></div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .service-title-link {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .service-title-link:hover {
+      color: #6ec7ff;
+      transform: translateY(-1px);
+    }
+    .card h3 {
+      margin: 0 0 12px 0;
+      cursor: pointer;
+    }
+    .card h3:hover {
+      transform: translateY(-1px);
+    }
+    @media (prefers-color-scheme: light) {
+      .service-title-link:hover {
+        color: #0a4fb3;
+      }
+    }
+    .no-announcements {
+      text-align: center;
+      color: #6b7280;
+      font-style: italic;
+      padding: 40px 20px;
+      background: #f9fafb;
+      border-radius: 8px;
+      border: 1px dashed #d1d5db;
+    }
+
+    .announcements-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .refresh-btn {
+      background: #4a9eff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 120px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .refresh-btn:hover:not(:disabled) {
+      background: #3a8eff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
+    }
+
+    .refresh-btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .loading {
+      text-align: center;
+      color: #6b7280;
+      padding: 40px 20px;
+      background: #f9fafb;
+      border-radius: 8px;
+      border: 1px dashed #d1d5db;
+    }
+
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #e5e7eb;
+      border-radius: 50%;
+      border-top-color: #4a9eff;
+      animation: spin 1s ease-in-out infinite;
+      margin-left: 10px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* 모달 스타일 개선 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 5% auto;
+      padding: 0;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: modalSlideIn 0.3s ease-out;
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, #4a9eff 0%, #3a8eff 100%);
+      color: white;
+      padding: 20px 24px;
+      border-radius: 12px 12px 0 0;
+      position: relative;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      font-weight: 300;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+
+    .modal-body {
+      padding: 24px;
+    }
+
+    .modal-body p {
+      margin: 0 0 16px 0;
+      line-height: 1.7;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .modal-files {
+      margin: 20px 0;
+      padding: 16px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+    }
+
+    .modal-files h4 {
+      margin: 0 0 12px 0;
+      color: #374151;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .modal-file-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .modal-file-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #374151;
+      transition: all 0.2s ease;
+    }
+
+    .modal-file-item:hover {
+      background: #f0f9ff;
+      border-color: #4a9eff;
+      color: #0369a1;
+    }
+
+    .modal-tags {
+      margin-top: 20px;
+    }
+
+    .modal-tags h4 {
+      margin: 0 0 12px 0;
+      color: #374151;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .modal-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .modal-tag {
+      background: #f0f9ff;
+      color: #0369a1;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid #bae6fd;
+    }
+
+    /* 더 보기 버튼 스타일 */
+    .announcements-more {
+      text-align: center;
+      margin-top: 24px;
+      padding: 16px;
+    }
+
+    .more-announcements-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    }
+
+             .more-announcements-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    /* 회사 정보 스타일 */
+    .company-info {
+      margin-top: 30px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .info-item {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      border-color: #4a9eff;
+    }
+
+    .info-item h3 {
+      margin: 0 0 12px 0;
+      color: #1e293b;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .info-item p {
+      margin: 0;
+      color: #475569;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* CTA 섹션 스타일 */
+    .cta-section {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-radius: 16px;
+      border: 1px solid #bae6fd;
+    }
+
+    .cta-section h2 {
+      margin: 0 0 16px 0;
+      color: #0c4a6e;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .cta-section p {
+      margin: 0 0 32px 0;
+      color: #0369a1;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .cta-btn.primary {
+      background: linear-gradient(135deg, #4a9eff 0%, #3a8eff 100%);
+      color: white;
+      border-color: #4a9eff;
+    }
+
+    .cta-btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(74, 158, 255, 0.3);
+    }
+
+    .cta-btn.secondary {
+      background: white;
+      color: #4a9eff;
+      border-color: #4a9eff;
+    }
+
+    .cta-btn.secondary:hover {
+      background: #4a9eff;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(74, 158, 255, 0.3);
+    }
+
+    /* 반응형 디자인 */
+    @media (max-width: 768px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+
+   </style>
+  
+  <script>
+    // ===== 공지사항 동적 로드 및 모달 기능 =====
+    
+    // Firebase 초기화 완료 후 실행
+    function initializeAnnouncements() {
+      loadAnnouncements();
+      
+      // 5분마다 공지사항 자동 새로고침
+      setInterval(() => {
+        loadAnnouncements();
+      }, 5 * 60 * 1000);
+    }
+    
+    // Firebase SDK 로드 완료 후 초기화
+    function waitForFirebase() {
+      if (window.db && window.collection && window.getDocs && window.query && window.orderBy) {
+        // Firebase가 이미 로드된 경우
+        console.log('Firebase SDK가 이미 로드되어 있습니다.');
+        console.log('Firebase 객체들:', {
+          db: !!window.db,
+          collection: !!window.collection,
+          getDocs: !!window.getDocs,
+          query: !!window.query,
+          orderBy: !!window.orderBy
+        });
+        initializeAnnouncements();
+      } else {
+        // Firebase 로드 대기
+        console.log('Firebase SDK 로드를 기다리는 중...', {
+          db: !!window.db,
+          collection: !!window.collection,
+          getDocs: !!window.getDocs,
+          query: !!window.query,
+          orderBy: !!window.orderBy
+        });
+        setTimeout(waitForFirebase, 100);
+      }
+    }
+    
+    // Firebase SDK 로드 완료를 기다리는 함수
+    function waitForFirebaseSDK() {
+      return new Promise((resolve) => {
+        function check() {
+          if (window.db && window.collection && window.getDocs && window.query && window.orderBy) {
+            resolve();
+          } else {
+            setTimeout(check, 100);
+          }
+        }
+        check();
+      });
+    }
+    
+         // DOM 로드 완료 후 Firebase 대기 시작
+     document.addEventListener('DOMContentLoaded', function() {
+       waitForFirebase();
+       
+       
+     });
+     
+     
+    const defaultAnnouncements = [
+      {
+        id: 'default-1',
+        title: '스마트코어솔루션 서비스 안내',
+        content: 'AI 음성인식 기반 헬스케어 및 스마트제조 SaaS 서비스를 제공합니다. 정신 건강 진단, 의료 기록 자동화, 재활 치료 지원, 스마트제조 솔루션 등 다양한 서비스를 이용해 보세요.',
+        date: '2025.01.20',
+        priority: 'high',
+        tags: ['서비스안내', 'AI', '헬스케어']
+      },
+             {
+         id: 'default-2',
+         title: '서비스 이용 안내',
+         content: '스마트코어솔루션의 다양한 서비스를 이용해보세요. 헬스케어부터 스마트제조까지, AI 기반 혁신 솔루션을 제공합니다.',
+         date: '2025.01.20',
+         priority: 'normal',
+         tags: ['서비스', 'AI', '혁신']
+       },
+      {
+        id: 'default-3',
+        title: '문의 및 상담 서비스',
+        content: '서비스 관련 문의사항이나 상담이 필요하시면 언제든 연락해 주세요. 빠른 시일 내에 답변드리겠습니다.',
+        date: '2025.01.20',
+        priority: 'normal',
+        tags: ['문의', '상담', '고객지원']
+      }
+    ];
+    // 공지사항 새로고침 함수
+    async function refreshAnnouncements() {
+      console.log('공지사항 새로고침 시작...');
+      
+      // 새로고침 버튼 비활성화 및 로딩 상태 표시
+      const refreshBtn = document.querySelector('.refresh-btn');
+      if (refreshBtn) {
+        refreshBtn.disabled = true;
+        refreshBtn.innerHTML = '⏳ 새로고침 중...';
+        refreshBtn.title = '새로고침 중...';
+      }
+      
+      try {
+        // Firebase SDK가 로드될 때까지 대기
+        await waitForFirebaseSDK();
+        
+        // Firebase 함수들이 로드되었는지 확인
+        if (!window.db || !window.collection || !window.getDocs || !window.query || !window.orderBy) {
+          throw new Error('Firebase 함수들이 로드되지 않았습니다.');
+        }
+        
+        // loadAnnouncements 함수가 정의되었는지 확인
+        if (typeof loadAnnouncements !== 'function') {
+          throw new Error('loadAnnouncements 함수를 찾을 수 없습니다.');
+        }
+        
+        await loadAnnouncements();
+        console.log('공지사항 새로고침 완료');
+        
+        // 성공 시 버튼 복원
+        if (refreshBtn) {
+          refreshBtn.disabled = false;
+          refreshBtn.innerHTML = '🔄 새로고침';
+          refreshBtn.title = '새로고침';
+        }
+      } catch (error) {
+        console.error('공지사항 새로고침 실패:', error);
+        
+        // 에러 메시지를 화면에 표시
+        const announcementsList = document.getElementById('announcementsList');
+        if (announcementsList) {
+          announcementsList.innerHTML = `<div class="no-announcements">새로고침 실패: ${error.message}</div>`;
+        }
+        
+        // 에러 시 버튼 복원
+        if (refreshBtn) {
+          refreshBtn.disabled = false;
+          refreshBtn.innerHTML = '🔄 새로고침';
+          refreshBtn.title = '새로고침';
+        }
+      }
+    }
+
+    async function loadAnnouncements() {
+      const announcementsList = document.getElementById('announcementsList');
+      if (!announcementsList) return;
+
+      // Firebase 함수들이 로드되었는지 확인
+      if (!window.db || !window.collection || !window.getDocs || !window.query || !window.orderBy) {
+        console.error('Firebase 함수들이 로드되지 않았습니다.');
+        announcementsList.innerHTML = '<div class="no-announcements">Firebase 연결을 확인하는 중...</div>';
+        return;
+      }
+
+      // 로딩 상태 표시
+      announcementsList.innerHTML = '<div class="loading">공지사항을 불러오는 중...</div>';
+
+      try {
+                 console.log('Firebase에서 공지사항을 가져오는 중...');
+         const announcementsRef = collection(db, 'announcements');
+         const q = query(announcementsRef, orderBy('createdAt', 'desc'));
+         const querySnapshot = await getDocs(q);
+        console.log('Firebase 쿼리 완료, 문서 수:', querySnapshot.size);
+
+        let announcements = [];
+        querySnapshot.forEach((doc) => {
+          announcements.push({
+            id: doc.id,
+            ...doc.data()
+          });
+        });
+
+                           if (announcements.length === 0) {
+            // Firebase에 공지사항이 없으면 기본 공지사항 표시 (최대 6개)
+            const limitedDefaultAnnouncements = defaultAnnouncements.slice(0, 6);
+            announcementsList.innerHTML = limitedDefaultAnnouncements.map((announcement, index) => `
+              <div class="announcement-card ${announcement.priority === 'high' ? 'priority-high' : ''}" onclick="showDefaultAnnouncementModal(${index})">
+                <div class="announcement-header">
+                  <span class="announcement-badge ${announcement.priority === 'high' ? 'priority-high' : ''}">${announcement.priority === 'high' ? '중요' : '일반'}</span>
+                  <span class="announcement-date">${announcement.date}</span>
+                </div>
+                <h3>${announcement.title}</h3>
+                <div class="announcement-tags">
+                  ${announcement.tags ? announcement.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+                </div>
+              </div>
+            `).join('');
+                     } else {
+             // Firebase에서 이미 createdAt 기준으로 정렬되어 있음
+             // 최대 6개까지만 표시
+             const limitedAnnouncements = announcements.slice(0, 6);
+            const announcementsHTML = limitedAnnouncements.map((announcement, index) => `
+              <div class="announcement-card ${announcement.priority === 'high' ? 'priority-high' : ''}" onclick="showAnnouncementModal(${index})">
+                <div class="announcement-header">
+                  <span class="announcement-badge ${announcement.priority === 'high' ? 'priority-high' : ''}">${announcement.priority === 'high' ? '중요' : '일반'}</span>
+                  <span class="announcement-date">${announcement.date}</span>
+                </div>
+                <h3>${announcement.title}</h3>
+                <div class="announcement-tags">
+                  ${announcement.tags ? announcement.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+                </div>
+              </div>
+            `).join('');
+            
+            // 6개 이상일 때 "더 보기" 버튼 추가
+            let moreButtonHTML = '';
+            if (announcements.length > 6) {
+              moreButtonHTML = `
+                <div class="announcements-more">
+                  <button class="more-announcements-btn" onclick="showAllAnnouncements()">
+                    📋 전체 공지사항 보기 (${announcements.length}개)
+                  </button>
+                </div>
+              `;
+            }
+            
+            announcementsList.innerHTML = announcementsHTML + moreButtonHTML;
+          }
+      } catch (error) {
+        console.error("Error loading announcements:", error);
+        announcementsList.innerHTML = '<div class="no-announcements">공지사항을 불러오는데 실패했습니다.</div>';
+      }
+    }
+    async function showAnnouncementModal(index) {
+             try {
+         console.log('모달용 공지사항 데이터 가져오는 중...');
+         const announcementsRef = collection(db, 'announcements');
+         const q = query(announcementsRef, orderBy('createdAt', 'desc'));
+         const querySnapshot = await getDocs(q);
+        console.log('모달용 Firebase 쿼리 완료, 문서 수:', querySnapshot.size);
+        
+        const announcements = [];
+        querySnapshot.forEach((doc) => {
+          announcements.push({
+            id: doc.id,
+            ...doc.data()
+          });
+        });
+        
+        const data = announcements[index];
+        if (!data) {
+          console.error('인덱스에 해당하는 공지사항을 찾을 수 없습니다:', index);
+          return;
+        }
+        
+        const modal = document.getElementById('announcementModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const modalFiles = document.getElementById('modalFiles');
+        const modalTags = document.getElementById('modalTags');
+        
+        if (modal && modalTitle && modalContent && modalFiles && modalTags) {
+          modalTitle.textContent = data.title;
+          modalContent.innerHTML = `<p>${data.content.replace(/\n/g, '</p><p>')}</p>`;
+                                           if (data.files && data.files.length > 0) {
+              modalFiles.innerHTML = `
+                <h4>첨부파일 (${data.files.length}개)</h4>
+                <div class="modal-file-list">
+                  ${data.files.map((file, fileIndex) => `
+                    <a href="#" class="modal-file-item" 
+                       data-filename="${file.name}" 
+                       data-filesize="${file.size}" 
+                       data-filedata="${encodeURIComponent(JSON.stringify(file))}"
+                       onclick="downloadFileFromData(this)">
+                      <span class="modal-file-icon">📎</span>
+                      ${file.name} (${formatFileSize(file.size)})
+                    </a>
+                  `).join('')}
+                </div>
+              `;
+            } else {
+              modalFiles.innerHTML = '';
+            }
+          if (data.tags && data.tags.length > 0) {
+            modalTags.innerHTML = `
+              <h4>태그</h4>
+              <div class="modal-tag-list">
+                ${data.tags.map(tag => `
+                  <span class="modal-tag">${tag}</span>
+                `).join('')}
+              </div>
+            `;
+          } else {
+            modalTags.innerHTML = '';
+          }
+          modal.style.display = 'block';
+        }
+      } catch (error) {
+        console.error('모달 표시 중 오류 발생:', error);
+      }
+    }
+    function closeModal() {
+      const modal = document.getElementById('announcementModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    // 기본 공지사항 모달 표시
+    function showDefaultAnnouncementModal(index) {
+      const data = defaultAnnouncements[index];
+      if (!data) return;
+      
+      const modal = document.getElementById('announcementModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalContent = document.getElementById('modalContent');
+      const modalFiles = document.getElementById('modalFiles');
+      const modalTags = document.getElementById('modalTags');
+      
+      if (modal && modalTitle && modalContent && modalFiles && modalTags) {
+        modalTitle.textContent = data.title;
+        modalContent.innerHTML = `<p>${data.content.replace(/\n/g, '</p><p>')}</p>`;
+        modalFiles.innerHTML = '';
+        modalTags.innerHTML = `
+          <h4>태그</h4>
+          <div class="modal-tag-list">
+            ${data.tags ? data.tags.map(tag => `
+              <span class="modal-tag">${tag}</span>
+            `).join('') : ''}
+          </div>
+        `;
+        modal.style.display = 'block';
+      }
+    }
+         // 파일 다운로드 함수
+     async function downloadFile(filename, size, fileData = null) {
+       try {
+         console.log('=== 파일 다운로드 시작 ===');
+         console.log('파일명:', filename);
+         console.log('파일 크기:', size);
+                   console.log('전달받은 fileData 타입:', typeof fileData);
+          console.log('전달받은 fileData 길이:', fileData ? (typeof fileData === 'string' ? fileData.length : '객체') : 'null');
+          console.log('전달받은 fileData 샘플:', fileData ? (typeof fileData === 'string' ? fileData.substring(0, 100) : '객체') : 'null');
+         
+                   // fileData 처리 및 로깅
+          let parsedFileData = fileData;
+          console.log('전달받은 fileData 타입:', typeof fileData);
+          
+          if (typeof fileData === 'string') {
+            // 문자열인 경우 디코딩 후 JSON으로 파싱
+            try {
+              console.log('safeAtob 디코딩 시도 중...');
+              parsedFileData = safeAtob(fileData);
+              console.log('✅ safeAtob 디코딩 성공');
+            } catch (e) {
+              console.error('❌ safeAtob 디코딩 실패:', e);
+              console.error('디코딩 실패한 원본 데이터:', fileData);
+            }
+          } else if (typeof fileData === 'object' && fileData !== null) {
+            // 객체인 경우 그대로 사용
+            console.log('✅ fileData가 객체로 전달됨');
+            parsedFileData = fileData;
+          } else {
+            console.error('❌ fileData 타입이 예상과 다름:', typeof fileData);
+            parsedFileData = null;
+          }
+          
+          // 파싱된 데이터 로깅
+          if (parsedFileData) {
+            console.log('파싱된 데이터:', {
+              name: parsedFileData.name,
+              size: parsedFileData.size,
+              type: parsedFileData.type,
+              hasData: !!parsedFileData.data,
+              dataLength: parsedFileData.data ? parsedFileData.data.length : 0,
+              isBase64: parsedFileData.isBase64
+            });
+          }
+         
+         if (parsedFileData && parsedFileData.data && parsedFileData.isBase64) {
+           // Base64 데이터가 있는 경우 다운로드
+           console.log('✅ Base64 데이터 확인됨, 다운로드 시작');
+           console.log('Base64 데이터 길이:', parsedFileData.data.length);
+           console.log('Base64 데이터 샘플 (처음 100자):', parsedFileData.data.substring(0, 100));
+           
+           try {
+             // Base64 데이터를 Blob으로 변환
+             console.log('Base64 → Blob 변환 시작...');
+             const byteCharacters = atob(parsedFileData.data);
+             console.log('atob 변환 완료, 바이트 문자 수:', byteCharacters.length);
+             
+             const byteNumbers = new Array(byteCharacters.length);
+             for (let i = 0; i < byteCharacters.length; i++) {
+               byteNumbers[i] = byteCharacters.charCodeAt(i);
+             }
+             console.log('바이트 배열 변환 완료');
+             
+                          const byteArray = new Uint8Array(byteNumbers);
+             const blob = new Blob([byteArray], { type: parsedFileData.type || 'application/octet-stream' });
+             console.log('Blob 생성 완료, 크기:', blob.size, '타입:', blob.type);
+             
+             // 다운로드 링크 생성
+             const url = window.URL.createObjectURL(blob);
+             const link = document.createElement('a');
+             link.href = url;
+             link.download = filename;
+             document.body.appendChild(link);
+             link.click();
+             document.body.removeChild(link);
+             
+             // 메모리 정리
+             window.URL.revokeObjectURL(url);
+             console.log('✅ Base64 파일 다운로드 완료');
+           } catch (blobError) {
+             console.error('❌ Blob 변환 또는 다운로드 실패:', blobError);
+             throw new Error(`Blob 변환 실패: ${blobError.message}`);
+           }
+         } else if (parsedFileData && parsedFileData.url) {
+           // Firebase Storage URL이 있는 경우 직접 다운로드 (기존 방식 유지)
+           console.log('Firebase Storage URL로 다운로드:', parsedFileData.url);
+           const link = document.createElement('a');
+           link.href = parsedFileData.url;
+           link.download = filename;
+           link.target = '_blank';
+           document.body.appendChild(link);
+           link.click();
+           document.body.removeChild(link);
+           console.log('Firebase Storage에서 파일 다운로드 완료');
+         } else {
+                     // 파일 정보만 있는 경우 사용자에게 안내
+          alert(`파일 "${filename}" 다운로드 준비 중입니다.\n\n파일 크기: ${formatFileSize(size)}\n\n현재는 파일 정보만 저장되어 있습니다.`);
+        }
+      } catch (error) {
+        console.error('파일 다운로드 실패:', error);
+        alert(`파일 다운로드 중 오류가 발생했습니다: ${error.message}`);
+      }
+    }
+    
+    // data 속성에서 파일 정보를 읽어서 다운로드하는 함수
+    function downloadFileFromData(element) {
+      try {
+        const filename = element.getAttribute('data-filename');
+        const filesize = parseInt(element.getAttribute('data-filesize'));
+        const filedata = element.getAttribute('data-filedata');
+        
+        console.log('=== data 속성에서 파일 정보 읽기 ===');
+        console.log('파일명:', filename);
+        console.log('파일 크기:', filesize);
+        console.log('파일 데이터 길이:', filedata ? filedata.length : 'null');
+        console.log('파일 데이터 샘플:', filedata ? filedata.substring(0, 100) : 'null');
+        
+        if (!filename || !filesize || !filedata) {
+          throw new Error('필수 파일 정보가 누락되었습니다.');
+        }
+        
+        // URL 디코딩 후 JSON 파싱
+        const decodedData = decodeURIComponent(filedata);
+        const fileObject = JSON.parse(decodedData);
+        
+        console.log('✅ 파일 객체 파싱 성공:', {
+          name: fileObject.name,
+          size: fileObject.size,
+          type: fileObject.type,
+          hasData: !!fileObject.data,
+          dataLength: fileObject.data ? fileObject.data.length : 0,
+          isBase64: fileObject.isBase64
+        });
+        
+        // 기존 downloadFile 함수 호출
+        downloadFile(filename, filesize, fileObject);
+        
+      } catch (error) {
+        console.error('data 속성에서 파일 정보 읽기 실패:', error);
+        alert(`파일 정보를 읽는 중 오류가 발생했습니다: ${error.message}`);
+      }
+    }
+         // 안전한 Base64 인코딩 함수 (한글 지원)
+     function safeBtoa(str) {
+       try {
+         // 간단한 방법: JSON.stringify 후 encodeURIComponent
+         return encodeURIComponent(JSON.stringify(str));
+       } catch (e) {
+         console.error('인코딩 실패:', e);
+         return str;
+       }
+     }
+     
+     // 안전한 Base64 디코딩 함수 (한글 지원)
+     function safeAtob(str) {
+       try {
+         // 간단한 방법: decodeURIComponent 후 JSON.parse
+         return JSON.parse(decodeURIComponent(str));
+       } catch (e) {
+         console.error('디코딩 실패:', e);
+         return str;
+       }
+     }
+     
+     function formatFileSize(bytes) {
+       if (bytes === 0) return '0 Bytes';
+       const k = 1024;
+       const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+       const i = Math.floor(Math.log(bytes) / Math.log(k));
+       return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+     }
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('announcementModal');
+      if (event.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') closeModal();
+    });
+
+         // 전체 공지사항 보기 함수
+     async function showAllAnnouncements() {
+       try {
+         const announcementsRef = collection(db, 'announcements');
+         const q = query(announcementsRef, orderBy('createdAt', 'desc'));
+         const querySnapshot = await getDocs(q);
+        
+        const allAnnouncements = [];
+        querySnapshot.forEach((doc) => {
+          allAnnouncements.push({
+            id: doc.id,
+            ...doc.data()
+          });
+        });
+        
+                 if (allAnnouncements.length > 0) {
+           // Firebase에서 이미 createdAt 기준으로 정렬되어 있음
+           
+           const announcementsList = document.getElementById('announcementsList');
+          const allAnnouncementsHTML = allAnnouncements.map((announcement, index) => `
+            <div class="announcement-card ${announcement.priority === 'high' ? 'priority-high' : ''}" onclick="showAnnouncementModal(${index})">
+              <div class="announcement-header">
+                <span class="announcement-badge ${announcement.priority === 'high' ? 'priority-high' : ''}">${announcement.priority === 'high' ? '중요' : '일반'}</span>
+                <span class="announcement-date">${announcement.date}</span>
+              </div>
+              <h3>${announcement.title}</h3>
+              <div class="announcement-tags">
+                ${announcement.tags ? announcement.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+              </div>
+            </div>
+          `).join('');
+          
+          // "간단 보기" 버튼 추가
+          const simpleViewButton = `
+            <div class="announcements-more">
+              <button class="more-announcements-btn" onclick="loadAnnouncements()">
+                🔽 간단 보기 (최근 6개)
+              </button>
+            </div>
+          `;
+          
+          announcementsList.innerHTML = allAnnouncementsHTML + simpleViewButton;
+        }
+      } catch (error) {
+        console.error('전체 공지사항 로드 실패:', error);
+        alert('전체 공지사항을 불러오는데 실패했습니다.');
+      }
+    }
+  </script>
+</body>
+</html>

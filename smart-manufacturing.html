@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>스마트 제조 솔루션 (재디자인)</title>
+  <meta name="description" content="스마트 제조 솔루션: 추진절차, 구성도, 기능 및 특징, 도입효과, 비용 안내">
+  <link rel="stylesheet" href="./smart-manufacturing.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="/icons/icon-192.png" alt="SCS">
+        <div class="title">SmartCoreSolution, Inc.</div>
+      </div>
+      <div class="menu">
+        <a href="/index.html">홈</a>
+        <div class="dropdown" id="svcDropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="svcSubmenu">
+            서비스 <span class="caret" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="svcSubmenu" role="menu">
+            <a role="menuitem" href="/services.html"><strong>서비스 전체 보기</strong></a>
+            <div style="height:1px;background:#e5eaf3;margin:4px 0;"></div>
+            <a role="menuitem" href="/healthcare-diagnosis.html">정신 건강·인지 기능 진단</a>
+            <a role="menuitem" href="/healthcare-emr.html">의료 기록 자동화</a>
+            <a role="menuitem" href="/healthcare-rehab.html">재활 치료·의료 통역</a>
+          </div>
+        </div>
+        <a href="/manufacturing.html">스마트제조</a>
+        <a href="/contact.html">문의</a>
+        <a href="/admin-announcements.html">공지사항등록</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="section">
+    <div class="container header">
+      <div class="left">
+        <h1>스마트 제조 솔루션</h1>
+        <p class="caption">IoT · AI · MES 기반으로 생산·품질·안전의 전 과정을 데이터화하고, 실시간 모니터링과 의사결정을 돕는 통합 솔루션입니다.</p>
+        <div>
+          <span class="badge">데이터 기반 의사결정</span>
+          <span class="badge">실시간 모니터링</span>
+          <span class="badge">공정 최적화</span>
+        </div>
+      </div>
+      <div class="right card">
+        <div class="kvs">
+          <div class="kv"><div class="key">개요</div><div class="val">중소 제조기업의 디지털 전환(DX) 가속화를 위한 표준화된 솔루션 제공</div></div>
+          <div class="kv"><div class="key">지원규모</div><div class="val">정부지원금 총 6,000만원 내외 (기업부담 30% 내외)</div></div>
+          <div class="kv"><div class="key">신청기간</div><div class="val">연중 수시 공고(지역별 상이)</div></div>
+          <div class="kv"><div class="key">지원내용</div><div class="val">스마트공방/스마트팩토리 등 사업과 연계하여 설비/공정/품질 데이터의 통합 수집·분석·시각화</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>추진절차</h2>
+      <div class="flow">
+        <div class="step card"><img class="icon" src="./assets/icons/announce.svg" alt=""><div>공고</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="./assets/icons/doc.svg" alt=""><div>서류평가</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="./assets/icons/present.svg" alt=""><div>발표평가</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="./assets/icons/handshake.svg" alt=""><div>협약</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="./assets/icons/run.svg" alt=""><div>사업수행</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="./assets/icons/report.svg" alt=""><div>결과보고</div></div>
+        <div class="arrow">→</div>
+        <div class="step card"><img class="icon" src="./assets/icons/monitor.svg" alt=""><div>사후평가</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>구성도</h2>
+      <div class="mes-diagram card">
+        <div class="mes-row" style="margin-bottom:10px">
+          <div class="mes-node">설비/센서</div>
+          <div class="mes-node">생산 데이터 수집</div>
+          <div class="mes-node">MES</div>
+          <div class="mes-node">서버(클라우드/IDC)</div>
+          <div class="mes-node">대시보드/쇼핑몰 연계</div>
+        </div>
+        <div class="caption">설비·센서 → MES → 서버 → 대시보드/커머스 연계 흐름</div>
+      </div>
+
+      <div class="grid-3" style="margin-top:14px">
+        <div class="card">입고관리</div>
+        <div class="card">생산관리</div>
+        <div class="card">품질관리</div>
+        <div class="card">설비관리</div>
+        <div class="card">기초정보관리</div>
+        <div class="card">출하관리</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>기능 및 특징</h2>
+      <div class="icon-list">
+        <div class="icon-item"><img src="./assets/icons/chart.svg" alt=""><div><strong>생산/품질 분석</strong><div class="caption">주요 KPI를 시각화하여 병목과 불량을 조기 감지</div></div></div>
+        <div class="icon-item"><img src="./assets/icons/monitor.svg" alt=""><div><strong>실시간 모니터링</strong><div class="caption">설비 상태·알람·작업 지시 현황을 실시간 파악</div></div></div>
+        <div class="icon-item"><img src="./assets/icons/server.svg" alt=""><div><strong>클라우드/온프레미스</strong><div class="caption">IDC/클라우드 모두 지원, 보안 및 가용성 강화</div></div></div>
+        <div class="icon-item"><img src="./assets/icons/gear.svg" alt=""><div><strong>공정 최적화</strong><div class="caption">자동화 룰 기반으로 작업·품질 공정을 최적화</div></div></div>
+        <div class="icon-item"><img src="./assets/icons/doc.svg" alt=""><div><strong>표준 양식</strong><div class="caption">입출고, 작업표준, 검사성적서 등 양식 표준화</div></div></div>
+        <div class="icon-item"><img src="./assets/icons/present.svg" alt=""><div><strong>교육/컨설팅</strong><div class="caption">현장 정착을 위한 교육과 컨설팅 패키지 제공</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>도입효과</h2>
+      <div class="grid-2">
+        <div class="card"><h3>경영 효율</h3><p class="caption">실시간 데이터 기반 의사결정, 리드타임 단축</p></div>
+        <div class="card"><h3>품질 향상</h3><p class="caption">불량률 감소, 공정 편차 관리 및 표준화</p></div>
+        <div class="card"><h3>공정 최적화</h3><p class="caption">설비 OEE 개선, 작업 지시/자재 흐름 최적화</p></div>
+        <div class="card"><h3>비용 절감</h3><p class="caption">재공/재고 최적화, 인건비·운영비 절감</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>스마트공방 소프트웨어 임대료 (2년)</h2>
+      <table class="table">
+        <thead>
+          <tr><th>사용 ID 개수</th><th>가격(원)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1개</td><td>14,000,000</td></tr>
+          <tr><td>2개</td><td>17,000,000</td></tr>
+          <tr><td>3개</td><td>22,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="container">© 2025 SmartCoreSolution · All Rights Reserved.</footer>
+
+  <style>
+    /* 드롭다운 메뉴 스타일 */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .dropbtn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 250px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #374151;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s ease;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+      background: #f8fafc;
+      color: #4a9eff;
+    }
+
+    .dropdown-content a strong {
+      color: #1f2937;
+      font-weight: 600;
+    }
+
+    .caret {
+      margin-left: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown[aria-expanded="true"] .caret {
+      transform: rotate(180deg);
+    }
+
+    /* 네비게이션 스타일 */
+    nav {
+      background: #0a487c;
+      color: white;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+    }
+
+    .brand .title {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .menu a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+
+  <script>
+    // 드롭다운 메뉴 기능
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdown = document.getElementById('svcDropdown');
+      const submenu = document.getElementById('svcSubmenu');
+      
+      if (dropdown && submenu) {
+        // 드롭다운 버튼 클릭 시 메뉴 토글
+        dropdown.addEventListener('click', function(e) {
+          // 링크가 아닌 버튼 영역만 클릭했을 때만 preventDefault
+          if (e.target.tagName !== 'A') {
+            e.preventDefault();
+            const isExpanded = dropdown.getAttribute('aria-expanded') === 'true';
+            dropdown.setAttribute('aria-expanded', !isExpanded);
+            submenu.style.display = isExpanded ? 'none' : 'block';
+          }
+        });
+
+        // 드롭다운 메뉴 내 링크 클릭 시 메뉴 닫기
+        submenu.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') {
+            // 링크 클릭 시 드롭다운 메뉴 닫기
+            dropdown.setAttribute('aria-expanded', 'false');
+            submenu.style.display = 'none';
+          }
+        });
+
+        // 외부 클릭 시 드롭다운 닫기
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.setAttribute('aria-expanded', 'false');
+            submenu.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
